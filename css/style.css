@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  color: #222222;
+  padding: 10px;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper .container {
+  width: 1024px;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 16px;
+  flex-grow: 1;
+  height: fit-content;
+  border: 2px solid black;
+}
+
+.item {
+  border-radius: 16px;
+  border: 2px solid black;
+  margin-top: 16px;
+  padding: 6px 24px 6px 24px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.item > .inner h4 {
+  margin-bottom: unset;
+  font-weight: normal;
+}
+
+.item > .inner p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.active {
+  border-bottom: 2px solid#222222;
+}
+
+#completed-todos {
+  display: none;
+}
+
+#completed-todos h4 {
+  text-decoration: line-through;
+}
+
+.form {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  height: 300px;
+  border-radius: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 4px;
+  font-style: italic;
+  /* font-size: 18px; */
+}
+
+.shadow {
+  box-shadow: 5px 5px #222222;
+}
+
+input[type="text"],
+input[type="date"] {
+  font-family: "Poppins", sans-serif;
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.btn-submit {
+  width: fit-content;
+  font-family: "Poppins", sans-serif;
+  border-radius: 16px;
+  padding: 12px 24px;
+  border: 2px solid;
+  color: black;
+  font-size: 16px;
+  margin-top: auto;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #222222;
+  color: white;
+}
+
+input[type="text"],
+input[type="date"],
+.btn-submit:focus {
+  outline: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.form-title {
+  margin: auto 0;
+}
+
+.category ul {
+  display: flex;
+  gap: 30px;
+}
+
+.category ul li {
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.empty {
+  color: gray;
+  text-align: center;
+}
+
+.check-button {
+  width: 30px;
+  height: 30px;
+  background: url("../assets/check-outline.svg");
+  background-size: contain;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+
+.check-button:hover {
+  background: url("../assets/check-solid.svg");
+  background-size: contain;
+}
+
+.trash-button {
+  width: 20px;
+  height: 20px;
+  background: url("../assets/trash-outline.svg");
+  background-size: contain;
+  margin-left: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.trash-button:hover {
+  background: url("../assets/trash-fill.svg");
+  background-size: contain;
+}
+
+.undo-button {
+  width: 20px;
+  height: 20px;
+  background: url("../assets/undo-ouline.svg");
+  background-size: contain;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+
+.undo-button:hover {
+  background: url("../assets/undo-ouline.svg");
+  background-size: contain;
+}
+
+.check-button:focus,
+.trash-button {
+  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    margin: 0;
+  }
+
+  .wrapper .container {
+    width: 95%;
+  }
+
+  .list-item {
+    width: 90%;
+    margin: auto;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
